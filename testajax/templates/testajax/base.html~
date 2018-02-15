@@ -1,0 +1,37 @@
+{% load static %}
+<head>
+{% block title %}mainpage{% endblock %}
+<script type="text/javascript" src="{% static "testajax/jquery-3.3.1.min.js" %}"></script>
+<script type="text/javascript" src="{% static "testajax/my.js" %}"></script>
+<style type="text/css">
+.mainbox {
+    display: flex;
+}
+ul {
+    list-style: none;
+}
+nav {
+    width: 200px;
+    
+}
+#main {
+width: 100%;
+}
+</style>
+</head>
+<body>
+<header>testajax</header>
+<div class="mainbox">
+<nav>
+    <ul>
+        <li><button id="amenu">a</button></li>
+        <li id="bmenu">b</li>
+    </ul>
+</nav>
+<div id="main">
+{% block main %}
+{% endblock %}
+</div>
+</div>
+<footer>copyright.</footer>
+</body>
